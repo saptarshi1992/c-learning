@@ -6,7 +6,12 @@
 //Exit
 //The program should keep running until the user chooses to exit
 
-// Online C compiler to run C program online
+//@todo::
+//PIN verification (3 attempts)
+//Minimum balance rule
+//Transaction history
+//Daily withdrawal limit
+
 #include <stdio.h>
 
 int main() {
@@ -52,6 +57,7 @@ int main() {
 
              default:
                 printf("Invalid choice! Please try again.\n");
+                break;
         }
     }
 
