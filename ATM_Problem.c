@@ -1,16 +1,4 @@
-//ATM Machine problem in C//
-//Design an ATM system that allows a user to:
-//Check balance
-//Deposit money
-//Withdraw money
-//Exit
-//The program should keep running until the user chooses to exit
 
-//@todo::
-//PIN verification (3 attempts)
-//Minimum balance rule
-//Transaction history
-//Daily withdrawal limit
 
 #include <stdio.h>
 
@@ -47,8 +35,15 @@ int main() {
             case 3:
                 printf("Enter Your Withdrawn amount:\n");
                 scanf("%f",&withdraw);
+                if(balance <= withdraw){
+                     printf("Maximum Balance Reached\n");
+                }
+                else if(balance <= 50){
+                  printf("Minimum Balance Reached\n");
+                }else{
                 balance=balance-withdraw;
                 printf("Your current balance is: ₹%.2f\n", balance);
+                }
                 break;
           
             case 4:
